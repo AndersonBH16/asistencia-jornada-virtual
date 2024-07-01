@@ -1,67 +1,103 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+    <img src=".readme_img/logo_unt.png" width="200" alt="Universidad Nacional de Trujillo">
 </p>
 
-## About Laravel
+# APLICACIÓN ASISTENCIA VIRTUAL - UNT
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este sistema se encargará de tomar asistencia a las jornadas virtuales en la Universidad Nacional de Trujillo.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requisitos previos
+- Se utiliza docker para una mejor uniformización de las herramientas y para homogenizar el setup para los desarrolladores.
+- Instalar docker y configurarlo según el S.O. (Tener en cuenta que para **Windows** se deberá configurar WSL).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+En el caso que se desee trabajar nativamente, se deberá considerar:
+- Tener instalado composer
+- Tener instalado npm
+  - PHPStorm (opcional)
 
-## Learning Laravel
+## Tools
+Se ha utilizado:
+- PHP 8.1.29
+- Laravel v 10.48.14
+- Javascript
+- Eloquent (ORM)
+- MySQL v8.4
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Instalación
+La aplicación está dockerizada y usa XDebug para su depuración. Todos los servicios se levantan utilizando:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 1. Clonar el proyecto en un directorio de trabajo:
+Momentáneamente utilizamos el protocolo HTTPS, esperando mejorar a SSH para seguridad.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```
+git clone https://github.com/AndersonBH16/asistencia-jornada-virtual.git
+```
 
-## Laravel Sponsors
+### 2. Levantar contenedores:
+```
+docker-compose up -d
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 3. Verificar que los contenedores corran óptimamente
+```
+docker ps
+```
+Deberá aparecer el siguiente log:
 
-### Premium Partners
+![Verificar contenedores encendidos](./.readme_img/docker_ps.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+El cual contiene 3 contendores: 
+- **asis-jornada-virtual :** Contiene la aplicación construida en PHP con el proyecto laravel
+- **asis-jornada.gninx :** Contiene el servidor ngnix
+- **asistencia-virtual-jornada :** Contiene la base de datos
 
-## Contributing
+### 4. Acceder a los contenedores
+```
+docker exec -it <<hash o nombre del contenedor>> bash
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 5. Apagar los contenedores
+```
+docker-compose down
+```
 
-## Code of Conduct
+Apaga todos los contenedores obtenidos a partir del docker-composer
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 6. Instalar dependencias composer
+```
+composer install
+```
 
-## Security Vulnerabilities
+### 7. Instalar dependencias npm
+```
+npm install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 8. Compilar paquetes npm
+```
+nopm run dev
+```
 
-## License
+### 9. Configurar el archivo .env con el **nombre de la BD**
+![Configurar la BD en el archivo.env](./.readme_img/env.png)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# asistencia-jornada-virtual
+### 10. Migrar la base de datos
+```
+php artisan migrate
+```
+
+### 11. Para comenzar a usarlo
+Laravel es un framework seguro, lo que una vez teniendolo configurado no podremos usarlo aún, para ello debemos ejecutar lo siguiente para tener una key de seguridad para el manejo de datos y sesiones encriptadas:
+```
+php artisan key:generate
+```
+
+### 12. Levantar el proyecto
+```
+php artisan serve
+```
+Abrir el navegador y entrar a `localhost:8080`
+
+## Acerca de
+Desarrollado por
+**OTI - Oficina de Tecnologías de Información** - 2024 - para **UNIVERSIDAD NACIONAL DE TRUJILLO**
