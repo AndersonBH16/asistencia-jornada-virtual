@@ -79,7 +79,7 @@ npm run dev
 ```
 
 ### 9. Configurar el archivo .env con el **nombre de la BD**
-![Configurar la BD en el archivo.env](./.readme_img/env2.png)
+![Configurar la BD en el archivo.env](./.readme_img/env2.PNG)
 
 ### 10. Migrar la base de datos
 ```
