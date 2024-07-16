@@ -75,11 +75,11 @@ npm install
 
 ### 8. Compilar paquetes npm
 ```
-nopm run dev
+npm run dev
 ```
 
 ### 9. Configurar el archivo .env con el **nombre de la BD**
-![Configurar la BD en el archivo.env](./.readme_img/env.png)
+![Configurar la BD en el archivo.env](./.readme_img/env2.png)
 
 ### 10. Migrar la base de datos
 ```
