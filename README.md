@@ -17,7 +17,7 @@ En el caso que se desee trabajar nativamente, se deberá considerar:
 
 ## Tools
 Se ha utilizado:
-- PHP 8.1.29
+- PHP 8.2.12
 - Laravel v 10.48.14
 - Javascript
 - Eloquent (ORM)
@@ -79,7 +79,7 @@ npm run dev
 ```
 
 ### 9. Configurar el archivo .env con el **nombre de la BD**
-![Configurar la BD en el archivo.env](./.readme_img/env2.png)
+![Configurar la BD en el archivo.env](./.readme_img/env2.PNG)
 
 ### 10. Migrar la base de datos
 ```
@@ -97,6 +97,31 @@ php artisan key:generate
 php artisan serve
 ```
 Abrir el navegador y entrar a `localhost:8080`
+
+### 13. Para instalar Laravel Jetstream 
+Laravel Jetstream es un paquete que proporciona la implementación para el inicio de sesión, el registro, la verificación de correo electrónico, la autenticación de dos factores, la administración de sesiones, API via Laravel Sanctum, y caracteristicas opcionales de administración de "teams".
+```
+composer require laravel/jetstream
+```  
+
+### 14. Para instalar Jetstream + Livewire
+Livewire es un framework full-stack que permite construir interfaces reactivas y dinamicas utilizando Laravel Blade como lenguaje de plantillas.
+```
+php artisan jetstream:install livewire
+``` 
+
+### 15. Finalizando la instalación
+Despues de instalar Jetstream, instalamos y construimos las dependencias NPM y migramos la base de datos.
+```
+npm install
+npm run build
+php artisan migrate
+``` 
+### 16. Para cargar los datos en la bd
+```
+php artisan migrate:fresh --seed
+``` 
+
 
 ## Acerca de
 Desarrollado por
