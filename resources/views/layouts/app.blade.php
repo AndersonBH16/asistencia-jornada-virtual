@@ -20,7 +20,7 @@
     <body class="font-sans antialiased">
         <x-banner />
 
-        <div class="flex h-screen bg-gray-200">
+        <div class="flex h-screen bg-gray-200 text-sm text-gray-900 dark:text-white">
             @livewire('sidebar')
             <!-- Content -->
             <div class="flex-1 flex flex-col">
