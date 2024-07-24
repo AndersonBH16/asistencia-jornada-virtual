@@ -26,7 +26,15 @@
             <div class="flex-1 flex flex-col">
                 <!-- Navbar -->
                 @livewire('navigation-menu')
-                <!-- Main Content -->
+                <!-- Page Heading -->
+                @if (isset($header))
+                    <header class="bg-white shadow">
+                        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                            {{ $header }}
+                        </div>
+                    </header>
+                @endif
+                <!-- Main Page -->
                 <main class="flex-1 overflow-x-hidden overflow-y-auto">
                     <div class="py-6 px-6">
                         {{ $slot }}
