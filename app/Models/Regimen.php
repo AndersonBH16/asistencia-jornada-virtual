@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Regimen extends Model
 {
     use HasFactory;
+
+    //relacion de uno a muchos
+    public function trabajador(){
+        return $this->hasMany('App\Models\Trabajador');
+    }
 }

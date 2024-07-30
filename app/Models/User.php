@@ -58,4 +58,20 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    //Relacion uno a uno
+    public function trabajador(){
+        return $this->hasOne('App\Models\Trabajador');
+    }
+
+    //relacion de muchos a muchos
+    public function roles() {
+        return $this->belongsToMany('App\Models\Role');
+    }
+
+    //relacion de muchos a muchos
+    public function jornadas(){
+        return $this->belongsToMany('App\Models\Jornada');
+    }
+
 }

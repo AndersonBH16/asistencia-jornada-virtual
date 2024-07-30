@@ -25,6 +25,8 @@ class DatabaseSeeder extends Seeder
             SedeSeeder::class,
             ModuloSeeder::class,
             EstructuraSeeder::class,     
+            TrabajadorSeeder::class,
+            Role_UserSeeder::class,
         ]);
     }
 }

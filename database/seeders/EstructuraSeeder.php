@@ -18,7 +18,7 @@ class EstructuraSeeder extends Seeder
             'dependencia_id'=>0,
             'nivel'=>7,
             'estado' => 1,         
-        ]);
+        ]);        
 
         DB::table('estructuras')->insert([
             'nombre' => 'VICERRECTORADO DE INVESTIGACIÓN',
@@ -355,7 +355,7 @@ class EstructuraSeeder extends Seeder
             'estado' => 1,         
         ]);
         DB::table('estructuras')->insert([
-            'nombre' => 'FACULTA DE CIENCIAS SOCIALES',
+            'nombre' => 'FACULTAD DE CIENCIAS SOCIALES',
             'dependencia_id'=>1,
             'nivel'=>7,
             'estado' => 1,         
@@ -1031,6 +1031,130 @@ class EstructuraSeeder extends Seeder
             'nivel'=>6,
             'estado' => 1,         
         ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'COMISIÓN PERMAMENTE DE FISCALIZACIÓN',
+            'dependencia_id'=>0,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'ORGANO DE CONTROL INSTITUCIONAL',
+            'dependencia_id'=>0,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'TRIBUNAL DE HONOR UNIVERSITARIO',
+            'dependencia_id'=>0,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'DEFENSORIA UNIVERSITARIA',
+            'dependencia_id'=>0,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'CENTRO PRE UNIVERSITARIO-CEPUNT',
+            'dependencia_id'=>51,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'CENTRO DE IDIOMAS-CIDUNT',
+            'dependencia_id'=>51,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+        DB::table('estructuras')->insert([
+            'nombre' => 'CENTRO EDUCATIVO EXPERIMENTAL RAFAEL NARVAEZ CADENILLAS',
+            'dependencia_id'=>51,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'CENTRO DE EVENTOS ACADÉMICOS-CEAUNT',
+            'dependencia_id'=>51,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);  
+        
+        DB::table('estructuras')->insert([
+            'nombre' => 'SEGUNDA ESPECIALIDAD EN TECNOLOGÍA EDUCATIVA',
+            'dependencia_id'=>72,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);  
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'SEGUNDA ESPECIALIDAD EN MEDICINA',
+            'dependencia_id'=>78,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'CENTRO DE INFORMÁTICA DE CIENCIAS ECONÓMICAS - CICEC',
+            'dependencia_id'=>68,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'COMITÉ ELECTORAL UNIVERSITARIO',
+            'dependencia_id'=>0,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'COMPLEJO ARQUEOLÓGICO HUACAS DE MOCHE',
+            'dependencia_id'=>70,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'MUSEO DE ARQUEOLOGÍA',
+            'dependencia_id'=>70,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'FILIAL VALLE JEQUETEPEQUE',
+            'dependencia_id'=>1,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'FILIAL HUAMACHUCO',
+            'dependencia_id'=>1,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+        DB::table('estructuras')->insert([
+            'nombre' => 'FILIAL SANTIAGO DE CHUCO',
+            'dependencia_id'=>1,
+            'nivel'=>7,
+            'estado' => 1,         
+        ]);
+
+
+
+
+
+
        
 
     }

@@ -27,5 +27,9 @@ class SedeSeeder extends Seeder
         'descripcion' => 'HUAMACHUCO',
       
        ]);
+
+       DB::table('sedes')->insert([
+        'descripcion' => 'SANTIAGO DE CHUCO',      
+       ]);
     }
 }
