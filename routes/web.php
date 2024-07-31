@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    return view('admin');
+    return redirect('/login');
 });
 
 Route::middleware([
@@ -26,3 +27,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::resources([
+    'asistencia' => \App\Http\Controllers\AsistenciaController::class
+]);
