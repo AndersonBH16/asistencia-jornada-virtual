@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<aside id="sidebar" x-data="{ open: false }" class="w-64 bg-gray-900 text-gray-100 flex-shrink-0 transition-all duration-300">
+<aside id="sidebar" x-data="{ open: false }" class="w-64 bg-gray-800 text-gray-100 flex-shrink-0 transition-all duration-300">
     <div class="h-full px-3 py-4 overflow-y-auto">
         <a href="{{ route('dashboard') }}" class="flex items-center ps-2.5 mb-5">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Universidad_Nacional_de_Trujillo_-_Per%C3%BA_vector_logo.png" class="h-6 me-3 sm:h-7" alt="Flowbite Logo" />
@@ -17,8 +17,8 @@
             </li>
             <li>
                 <a href="/asistencia" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
-                        <path d="m2.695 14.762-1.262 3.155a.5.5 0 0 0 .65.65l3.155-1.262a4 4 0 0 0 1.343-.886L17.5 5.501a2.121 2.121 0 0 0-3-3L3.58 13.419a4 4 0 0 0-.885 1.343Z" />
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.779 17.779 4.36 19.918 6.5 13.5m4.279 4.279 8.364-8.643a3.027 3.027 0 0 0-2.14-5.165 3.03 3.03 0 0 0-2.14.886L6.5 13.5m4.279 4.279L6.499 13.5m2.14 2.14 6.213-6.504M12.75 7.04 17 11.28"/>
                     </svg>
                     <span class="flex-1 ms-3 whitespace-nowrap">Asistencia</span>
                 </a>
